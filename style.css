@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+
+}
+
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: 100px;
+}
+
+/*estilização header*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-neutral-10);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+    text-align: center;
+    z-index: 40;
+    height: 5.5rem;
+}
+
+.logo h1, a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*estilizção dos botões da header*/
+.menu li {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.menu a li {
+    font-size: 24px;
+    border: 3px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 0;
+    border-radius: 15px;
+    letter-spacing: 3.5px;
+}
+
+.menu a li::after {
+    content: '';
+    display: block;
+    border-bottom: solid 1px #ffffff;
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+
+.menu a li:hover:after {
+    transform: scaleX(1);
+}
+
+.pay button {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-neutral-10);
+    border: none;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.pay button i {
+    font-size: 24px;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+.pay button:hover {
+    opacity: .7;
+}
+
+#slide {
+    text-align: center;
+}
+
+#slide img {
+    height: 2%;
+    width: 62rem;
+    margin-top: 7rem;
+}
+
+#textoslide {
+    text-align: center;
+    margin-top: 3vw;
+}
+
+#textoslide h1 {
+    font-weight: bold;
+    font-family: fantasy;
+    font-size: 3vw;
+}
+
+#buttonslide {
+    text-align: center;
+    margin-top: 3vw;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2vw;
+}
+
+#btn {
+    cursor: pointer;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 5px;
+    border: none;
+    padding: 1.5vw;
+    height: 5vw;
+    width: 15vw;
+}
+
+#btn:hover {
+    box-shadow: 10px 5px 7px 1px rgba(0, 0, 0, .30);
+    transform: translateY(-2px);
+    transition: 0.2s;
+}
+
+#titulobanner {
+    margin-top: 10vw;
+    font-size: 3vw;
+    font-family: fantasy;
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    gap: .3vw;
+}
+
+#banner img {
+    width: 25rem;
+    cursor: pointer;
+}
+
+#segundobanner {
+    padding-left: 15vw;
+    margin-top: 7vw;
+    display: flex;
+    justify-content: left;
+    gap: .3vw;
+}
+
+#segundobanner img {
+    width: 35vw;
+    height: 55vw;
+}
+
+#textoentrega p {
+    margin-top: 10vw;
+    display: flex;
+    justify-content: center;
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+#modoentrega {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: 5vw;
+}
+
+#modoentrega img {
+    width: 8vw;
+    height: 8vw;
+    padding-left: 5.9vw;
+}
+
+.quadro {
+    border-radius: 5px;
+    width: 20vw;
+    padding: 2vw;
+    cursor: pointer;
+}
+
+.quadro h4 {
+    text-align: justify;
+}
+
+
+.quadro:hover {
+    background-color: rgba(247, 241, 241, 0.589);
+    transform: translateY(2px);
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, .30);
+    transition: .5s;
+}
+
+.containerItens {
+    display: flex;
+    gap: 4vw;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+}
+
+.containerItens img {
+    width: 100%;
+    height: 20vw;
+}
+
+.itens {
+    padding: 1rem;
+    width: 25vw;
+    height: 25vw;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 10vw;
+}
+
+#textocategoria {
+    margin-left: 10vw;
+    font-weight: bold;
+    font-family: fantasy;
+    font-size: 2vw;
+}
+
+.divcategoria img {
+    width: 20vw;
+    height: 28vw;
+    position: relative;
+    display: inline-block;
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.divcategoria img:hover {
+    box-shadow: 5px 2px 5px 1px rgba(0, 0, 0, .30);
+    transform: scale(1.05, 1.05);
+    transition-delay: 0.1s;
+    transition-duration: 0.7s;
+    transition-property: all;
+    transition-timing-function: ease;
+    /*cubic-bezier(0.165, 0.84, 0.44, 1);*/
+    opacity: 100%;
+
+}
+
+.divcategoria img:hover::after {
+
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: ease;
+    width: 20vw;
+    height: 28vw;
+}
+
+.divcategoria img:active {
+    transform: translateY(1px);
+}
+
+.divcategoria {
+    display: flex;
+    gap: .8vw;
+    justify-content: center;
+}
+
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h3 {
+    margin-bottom: 0.75;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link,
+.footer_payment .footer-pay {
+    color: var(--color-neutral-30);
+}
+
+/*aumenta o tamanho do font awesome das formas de pagamento*/
+/*#footer_payment .footer-link i {
+    font-size: 2.5rem;
+    
+}*/
+
+#footer_payment h3 {
+    margin-bottom: 0.75;
+}
+
+#footer_payment .footer-link img {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-30);
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    border-color: var(--color-neutral-30);
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-neutral-10);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+#footer_copyright .footer-link {
+    margin: 5rem;
+    text-decoration: none;
+    color: var(--color-neutral-40);
+}
