@@ -5,14 +5,6 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
-
-}
-
-:root {
-    --color-neutral-0: #0e0c0c;
-    --color-neutral-10: #171717;
-    --color-neutral-30: #a8a29e;
-    --color-neutral-40: #f5f5f5;
 }
 
 html {
@@ -23,11 +15,17 @@ html {
     scroll-margin-top: 100px;
 }
 
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
 /*estilização header*/
 header {
     position: fixed;
     top: 0;
-    width: 100%;
     background-color: var(--color-neutral-10);
     display: flex;
     justify-content: space-around;
@@ -35,10 +33,12 @@ header {
     padding: 5px 0;
     text-align: center;
     z-index: 40;
+    width: 100%;
     height: 5.5rem;
 }
 
-.logo h1, a {
+.logo h1,
+a {
     color: #ffffff;
     text-decoration: none;
 }
@@ -63,7 +63,7 @@ header {
 .menu a li::after {
     content: '';
     display: block;
-    border-bottom: solid 1px #ffffff;
+    border-bottom: solid 1px var(--color-neutral-40);
     padding-bottom: 1%;
     transform: scaleX(0);
     transition: transform 300ms ease-in-out;
@@ -85,7 +85,7 @@ header {
 .pay button i {
     font-size: 24px;
     text-decoration: none;
-    color: #ffffff;
+    color: var(--color-neutral-40);
     border-radius: 15px;
 }
 
@@ -93,11 +93,12 @@ header {
     opacity: .7;
 }
 
-#slide {
-    text-align: center;
+.slide {
+    display: flex;
+    justify-content: center;
 }
 
-#slide img {
+.slide img {
     height: 2%;
     width: 62rem;
     margin-top: 7rem;
@@ -105,35 +106,36 @@ header {
 
 #textoslide {
     text-align: center;
-    margin-top: 3vw;
+    margin-top: 3rem;
 }
 
 #textoslide h1 {
     font-weight: bold;
     font-family: fantasy;
-    font-size: 3vw;
+    font-size: 3rem;
 }
 
 #buttonslide {
     text-align: center;
-    margin-top: 3vw;
+    margin-top: 3rem;
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 2vw;
+    gap: 2rem;
 }
 
 #btn {
+    letter-spacing: 1px;
     cursor: pointer;
-    font-size: 1vw;
+    font-size: 1.6rem;
     font-weight: bold;
-    color: #ffffff;
-    background-color: #000000;
+    color: var(--color-neutral-40);
+    background-color: var(--color-neutral-10);
     border-radius: 5px;
     border: none;
-    padding: 1.5vw;
-    height: 5vw;
-    width: 15vw;
+    padding: 1.5rem;
+    height: 5rem;
+    width: 15rem;
 }
 
 #btn:hover {
@@ -143,79 +145,25 @@ header {
 }
 
 #titulobanner {
-    margin-top: 10vw;
-    font-size: 3vw;
+    margin-top: 10rem;
+    font-size: 3rem;
     font-family: fantasy;
 }
 
 #banner {
     display: flex;
     justify-content: center;
-    gap: .3vw;
+    gap: .3rem;
+    flex-wrap: wrap;
 }
 
 #banner img {
     width: 25rem;
-    cursor: pointer;
-}
-
-#segundobanner {
-    padding-left: 15vw;
-    margin-top: 7vw;
-    display: flex;
-    justify-content: left;
-    gap: .3vw;
-}
-
-#segundobanner img {
-    width: 35vw;
-    height: 55vw;
-}
-
-#textoentrega p {
-    margin-top: 10vw;
-    display: flex;
-    justify-content: center;
-    font-family: fantasy;
-    font-weight: bold;
-    font-size: 3vw;
-}
-
-#modoentrega {
-    display: flex;
-    justify-content: center;
-    gap: 5vw;
-    margin-top: 5vw;
-}
-
-#modoentrega img {
-    width: 8vw;
-    height: 8vw;
-    padding-left: 5.9vw;
-}
-
-.quadro {
-    border-radius: 5px;
-    width: 20vw;
-    padding: 2vw;
-    cursor: pointer;
-}
-
-.quadro h4 {
-    text-align: justify;
-}
-
-
-.quadro:hover {
-    background-color: rgba(247, 241, 241, 0.589);
-    transform: translateY(2px);
-    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, .30);
-    transition: .5s;
 }
 
 .containerItens {
     display: flex;
-    gap: 4vw;
+    gap: 4rem;
     justify-content: center;
     margin-top: 3rem;
     margin-bottom: 3.5rem;
@@ -223,38 +171,44 @@ header {
 
 .containerItens img {
     width: 100%;
-    height: 20vw;
+    height: 20rem;
 }
 
 .itens {
     padding: 1rem;
-    width: 25vw;
-    height: 25vw;
+    width: 25rem;
+    height: 25rem;
     cursor: pointer;
     border-radius: 5px;
 }
 
 main {
-    margin-top: 10vw;
+    margin-top: 10rem;
 }
 
 #textocategoria {
-    margin-left: 10vw;
+    text-align: center;
     font-weight: bold;
     font-family: fantasy;
-    font-size: 2vw;
+    font-size: 2rem;
+}
+
+.categoria {
+    width: 100%;
+    height: 100%;
 }
 
 .divcategoria img {
-    width: 20vw;
-    height: 28vw;
+    width: 260px;
+    height: 400px;
     position: relative;
-    display: inline-block;
     opacity: 70%;
     cursor: pointer;
+    filter: brightness(80%) blur(.2px)
 }
 
 .divcategoria img:hover {
+    filter: brightness(100%) blur(0);
     box-shadow: 5px 2px 5px 1px rgba(0, 0, 0, .30);
     transform: scale(1.05, 1.05);
     transition-delay: 0.1s;
@@ -266,25 +220,53 @@ main {
 
 }
 
-.divcategoria img:hover::after {
-
-    transition-duration: 1s;
-    transition-property: all;
-    transition-timing-function: ease;
-    width: 20vw;
-    height: 28vw;
-}
-
-.divcategoria img:active {
-    transform: translateY(1px);
-}
-
 .divcategoria {
     display: flex;
-    gap: .8vw;
+    gap: .8rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
+#textoentrega p {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#modoentrega {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+#modoentrega img {
+    width: 140px;
+    height: 140px;
+    padding-left: 76px;
+}
+
+.quadro {
+    border-radius: 5px;
+    width: 300px;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.quadro h4 {
+    text-align: justify;
+}
+
+.quadro:hover {
+    background-color: rgba(247, 241, 241, 0.589);
+    transform: translateY(2px);
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, .30);
+    transition: .5s;
+}
 
 footer {
     width: 100%;
@@ -346,17 +328,11 @@ footer {
     color: var(--color-neutral-30);
 }
 
-/*aumenta o tamanho do font awesome das formas de pagamento*/
-/*#footer_payment .footer-link i {
-    font-size: 2.5rem;
-    
-}*/
-
 #footer_payment h3 {
     margin-bottom: 0.75;
 }
 
-#footer_payment .footer-link img {
+#footer_payment .footer-link {
     height: 2.5rem;
     width: 2.5rem;
     color: var(--color-neutral-30);
@@ -370,7 +346,7 @@ hr {
 
 #footer_copyright {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: var(--color-neutral-10);
     font-size: 0.9rem;
     padding: 1.5rem;
@@ -381,4 +357,35 @@ hr {
     margin: 5rem;
     text-decoration: none;
     color: var(--color-neutral-40);
+}
+/*@media screen and (min-width: 1024px) {
+   responsividade desktop fazer se necessario 
+}*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3rem 3.5rem;
+    }
+
+    #textocategoria {
+        font-size: 2.5rem;
+    }
+    .slide img{
+        width: 40rem;
+    }
+    #textoslide h1{
+        font-size: 2.5rem;
+    }
+    #textoslide h4 {
+        font-size: 1.4rem;
+    }
+    #footer_copyright{
+        flex-direction: column;
+        text-align: center;
+    }
+    .quadro h4 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
 }
