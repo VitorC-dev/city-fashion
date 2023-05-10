@@ -27,7 +27,7 @@ header {
     position: fixed;
     top: 0;
     background-color: var(--color-neutral-10);
-    display: flex;
+    display: inline-flex;
     justify-content: space-around;
     align-items: center;
     padding: 5px 0;
@@ -37,30 +37,45 @@ header {
     height: 5.5rem;
 }
 
-.logo h1,
-a {
-    color: #ffffff;
+.nav-bar {
+    display: inline-flex;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a,
+h1 {
+    color: var(--color-neutral-40);
     text-decoration: none;
 }
 
-/*estilizção dos botões da header*/
-.menu li {
-    display: inline-block;
-    margin: 0 10px;
-    cursor: pointer;
+.nav-list {
+    display: flex;
+    place-items: center;
 }
 
-.menu a li {
-    font-size: 24px;
-    border: 3px;
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
     text-decoration: none;
-    color: #ffffff;
-    padding: 10px 0;
-    border-radius: 15px;
-    letter-spacing: 3.5px;
+    font-size: 1.5rem;
+    color: var(--color-neutral-40);
+    font-weight: 400;
 }
 
-.menu a li::after {
+.nav-list a li::after {
     content: '';
     display: block;
     border-bottom: solid 1px var(--color-neutral-40);
@@ -69,11 +84,11 @@ a {
     transition: transform 300ms ease-in-out;
 }
 
-.menu a li:hover:after {
+.nav-list a li:hover:after {
     transform: scaleX(1);
 }
 
-.pay button {
+.pay-button button {
     width: 40px;
     height: 40px;
     background-color: var(--color-neutral-10);
@@ -82,15 +97,23 @@ a {
     padding: 10px 0;
 }
 
-.pay button i {
+.pay-button button i {
     font-size: 24px;
     text-decoration: none;
     color: var(--color-neutral-40);
     border-radius: 15px;
 }
 
-.pay button:hover {
+.pay-button button:hover {
     opacity: .7;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 .slide {
@@ -150,14 +173,14 @@ a {
     font-family: fantasy;
 }
 
-#banner {
+.banner {
     display: flex;
     justify-content: center;
     gap: .3rem;
     flex-wrap: wrap;
 }
 
-#banner img {
+.banner img {
     width: 25rem;
 }
 
@@ -358,11 +381,101 @@ hr {
     text-decoration: none;
     color: var(--color-neutral-40);
 }
-/*@media screen and (min-width: 1024px) {
-   responsividade desktop fazer se necessario 
-}*/
 
-@media screen and (min-width: 768px) and (max-width: 1023px){
+@media screen and (max-width: 767px) and (min-width: 320px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem 2.5rem;
+    }
+
+    #textocategoria {
+        font-size: 2rem;
+    }
+
+    .slide img {
+        width: 23rem;
+    }
+
+    #textoslide h1 {
+        font-size: 2rem;
+        color: var(--color-neutral-0);
+    }
+
+    #textoslide h4 {
+        font-size: 1.2rem;
+    }
+    #btn{
+        font-size: 1rem;
+        width: 10rem;
+    }
+
+    .banner #img2{
+     visibility: hidden;
+     width: 0;
+    }
+    .icon{
+        margin-right: 30px;
+    }
+    #footer_copyright {
+        display: block;
+        text-align: center;
+    }
+
+    .quadro h4 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    #textoentrega p {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .nav-bar {
+        display: contents;
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .pay-button {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: inline-flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .open {
+        display: block;
+        position: fixed;
+        background-color: #171717ad;
+        width: 100%;
+        top: 5rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     #footer_content {
         grid-template-columns: repeat(2, 1fr);
         padding: 3rem 3.5rem;
@@ -371,21 +484,69 @@ hr {
     #textocategoria {
         font-size: 2.5rem;
     }
-    .slide img{
+
+    .slide img {
         width: 40rem;
     }
-    #textoslide h1{
+
+    #textoslide h1 {
         font-size: 2.5rem;
     }
+
     #textoslide h4 {
         font-size: 1.4rem;
     }
-    #footer_copyright{
+
+    #footer_copyright {
         flex-direction: column;
         text-align: center;
     }
+
     .quadro h4 {
         font-size: 1.4rem;
         text-align: center;
+    }
+
+    .nav-bar {
+        display: contents;
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .pay-button {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: inline-flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .open {
+        display: block;
+        position: fixed;
+        background-color: #171717ad;
+        width: 100%;
+        top: 5rem;
     }
 }

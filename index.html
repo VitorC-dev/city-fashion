@@ -13,36 +13,51 @@
 
 <body>
     <header>
-        <div class="logo">
-            <a href="#">
-                <h1>city fashion</h1>
-            </a>
-        </div>
-        <div class="menu">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="#"><h1>City Fashion</h1></a>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <a href="#" class="nav-link"><li class="nav-item">Ínicio</li></a>
+                    <a href="#masc" class="nav-link"><li class="nav-item">Masculino</li></a>
+                    <a href="#inf" class="nav-link"><li class="nav-item">Infantil</li></a>
+                    <a href="#femini" class="nav-link"><li class="nav-item">Feminino</li></a>
+                    <a href="#contatos" class="nav-link"><li class="nav-item">Contatos</li></a>
+                </ul>
+            </div>
+
+            <div class="pay-button">
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+                <button><i class="fa-solid fa-user"></i></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="abrirMenu()"><img src="image/menu_white_36dp.svg" alt="menu icon" class="icon"></button>
+            </div>
+
+        </nav>
+
+        <div class="mobile-menu">
             <ul>
-                <a href="#">
-                    <li>início</li>
-                </a>
-                <a href="#feminino">
-                    <li>feminino</li>
-                </a>
-                <a href="#masc">
-                    <li>masculino</li>
-                </a>
-                <a href="#infa">
-                    <li>infantil</li>
-                </a>
-                <a href="#contatos">
-                    <li>contatos</li>
-                </a>
+                <a href="#" class="nav-link"><li class="nav-item">Ínicio</li></a>
+                <a href="#masc" class="nav-link"><li class="nav-item">Masculino</li></a>
+                <a href="#inf" class="nav-link"><li class="nav-item">Infantil</li></a>
+                <a href="#femini" class="nav-link"><li class="nav-item">Feminino</li></a>
+                <a href="#contatos" class="nav-link"><li class="nav-item">Contatos</li></a>
             </ul>
+
+            <div class="pay-button">
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+                <button><i class="fa-solid fa-user"></i></button>
+            </div>
         </div>
-        <div class="pay">
-            <button><i class="fa-solid fa-cart-shopping"></i></button>
-            <button><i class="fa-solid fa-user"></i></button>
-        </div>
+
     </header>
-    <div id="slide">
+
+
+    <div class="slide">
         <img src="image/slider roupas.jpg" />
     </div>
     <div id="textoslide">
@@ -55,9 +70,9 @@
 
         <p id="titulobanner">FAÇA SUA MODA. SEJA VOCÊ!</p>
 
-        <div id="banner">
+        <div class="banner">
             <img src="image/Mulher basquete.jpg" />
-            <img src="image/negao e branquelo.jpg" />
+            <img id="img2" src="image/negao e branquelo.jpg" />
         </div>
     </div>
 
@@ -166,6 +181,7 @@
         </div>
 
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
