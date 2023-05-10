@@ -406,18 +406,21 @@ hr {
         color: var(--color-neutral-0);
         font-size: 1.2rem;
     }
-    #btn{
+
+    #btn {
         font-size: 1rem;
         width: 10rem;
     }
 
-    .banner #img2{
-     visibility: hidden;
-     width: 0;
+    .banner #img2 {
+        visibility: hidden;
+        width: 0;
     }
-    .icon{
+
+    .icon {
         margin-right: 30px;
     }
+
     #footer_copyright {
         display: block;
         text-align: center;
@@ -465,7 +468,16 @@ hr {
 
     .mobile-menu .nav-item {
         display: block;
-        padding-top: 1.2rem;
+        padding-top: 2.2rem;
+    }
+
+    .mobile-menu .pay-button {
+        width: 100%;
+        display: block;
+    }
+
+    .mobile-menu .pay-button button {
+        background-color: transparent;
     }
 
     .open {
@@ -474,6 +486,7 @@ hr {
         background-color: #171717ad;
         width: 100%;
         top: 5rem;
+        padding: 1rem;
     }
 }
 
@@ -543,7 +556,16 @@ hr {
 
     .mobile-menu .nav-item {
         display: block;
-        padding-top: 1.2rem;
+        padding-top: 2.2rem;
+    }
+
+    .mobile-menu .pay-button {
+        width: 100%;
+        display: block;
+    }
+
+    .mobile-menu .pay-button button {
+        background-color: transparent;
     }
 
     .open {
